@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Kadai of Thymeleaf</title>
+</head>
+<body>
+     <h1 th:text="#{content.title}">Thymeleaf</h1>
+     <h2>入力画面</h2>
+    <p>値を入力してください。</p>
+    <p th:if="${previous}" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p>
+    <form action="/output" method="post">
+        <input type="text" name="inputText" />
+        <input type="submit" value="送信" />
+    </form>
+
+</body>
+</html>
+
